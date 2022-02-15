@@ -37,12 +37,12 @@ scene.add(pointLight, ambientLight);
 const controls = new OrbitControls(camera, renderer.domElement);
 var loader = new THREE.TextureLoader();
 var mats = [
-  '/assets/pra.png', //those are strings with urls, for example: "https://threejs.org/examples/textures"/uv_grid_opengl.jpg
-  '/assets/prati.jpeg',
-  '/assets/5.jpeg',
-  '/assets/2.jpeg', //those are strings with urls, for example: "https://threejs.org/examples/textures"/uv_grid_opengl.png
-  '/assets/3.jpeg',
-  '/assets/4.jpeg',
+  './assets/pra.png', //those are strings with urls, for example: "https://threejs.org/examples/textures"/uv_grid_opengl.jpg
+  './assets/prati.jpeg',
+  './assets/5.jpeg',
+  './assets/2.jpeg', //those are strings with urls, for example: "https://threejs.org/examples/textures"/uv_grid_opengl.png
+  './assets/3.jpeg',
+  './assets/4.jpeg',
 ].map(pic => {
   return new THREE.MeshLambertMaterial({map: loader.load(pic)});
 });
@@ -62,7 +62,7 @@ function addStar() {
 }
 
 Array(200).fill().forEach(addStar);
-const spaceTexture = new THREE.TextureLoader().load('space.jpeg');
+const spaceTexture = new THREE.TextureLoader().load('./assets/space.jpeg');
 scene.background = spaceTexture;
 
 function moveCamera() {
@@ -115,8 +115,8 @@ animate()
 
 //Moon
 
-const moonTexture = new THREE.TextureLoader().load('/assets/moon.jpeg');
-const normalTexture = new THREE.TextureLoader().load('/assets/normal.jpeg');
+const moonTexture = new THREE.TextureLoader().load('./assets/moon.jpeg');
+const normalTexture = new THREE.TextureLoader().load('./assets/normal.jpeg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
