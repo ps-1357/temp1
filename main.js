@@ -39,7 +39,7 @@ var loader = new THREE.TextureLoader();
 var mats = [
   './assets/pra.png', //those are strings with urls, for example: "https://threejs.org/examples/textures"/uv_grid_opengl.jpg
   './assets/prati.jpeg',
-  './assets/5.jpeg',
+  './assets/5.png',
   './assets/2.jpeg', //those are strings with urls, for example: "https://threejs.org/examples/textures"/uv_grid_opengl.png
   './assets/3.jpeg',
   './assets/4.jpeg',
